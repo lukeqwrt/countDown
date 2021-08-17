@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('./LandingPage.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Lato', sans-serif;
+}
+
+h2{
+    padding: 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.coming-soon{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    justify-content: center;
+}
+.countdown{
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.day,.hour,.minute,.second{
+    font-size: 1.5rem;
+}
+
+.waiting{
+    height: 50vh;
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+    h2{
+        padding: 3rem 10px;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    .waiting{
+        height: 30vh;
+
+    }
+
+    .day,.hour,.minute,.second{
+        font-size: 1rem;
+    }
+    
+    .balloonUp1,.balloonUp2,.balloonUp3{
+        width: 51px;
+        height: 60px;
+    }
+        
+}
+
+.illus{
+    height: 100%;
+    width: 100%;
+}
+
+
+.balloonUp1{
+    position: absolute;
+    top: 20%;
+    left: 52%;
+    animation: goUp 6s ease forwards;
+    animation-delay: 0.5s;
+}
+@keyframes goUp {
+    0%{
+        top: 20%;
+        left: 52%;
+    }
+    40%{
+        left: 60%;
+        transform: rotate(-40deg);
+    }
+    100%{
+        top: -1000px;
+    }
+}
+.balloonUp2{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    animation: goUptwo 6s ease forwards;
+    animation-delay: 0.5s;
+}
+@keyframes goUptwo {
+    0%{
+        left: 10%;
+        top: 20%;
+    }
+    40%{
+        left: -40%;
+    }
+    100%{
+        top: -1000px;
+    }
+}
+.balloonUp3{
+    position: absolute;
+    top: 38%;
+    right: 20%;
+    animation: goUpthree 6s ease forwards;
+    animation-delay: 0.5s;
+}
+@keyframes goUpthree {
+    0%{
+        top: 38%;
+        right: 20%;
+    }
+    30%{
+        right: 0;
+    }
+    100%{
+        top: -1000px;
+    }
+}
+/* 
+@keyframes goUp {
+    0%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+} */
+
+#balloonUp2{
+
+}
+#balloonUp3{
+
+}
