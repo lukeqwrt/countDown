@@ -17,6 +17,10 @@ const countDown = () => {
     document.querySelector('.hour').innerText = textHour    
     document.querySelector('.minute').innerText = textMinute    
     document.querySelector('.second').innerText = textSecond    
+
+    if(textDay <= 0 && textHour <= 0 && textMinute <= 0 && textSecond <= 0){
+        document.querySelector('.coming-soon').style.display = "none"
+    }
 }
 setInterval(countDown, 1000)
 countDown();
